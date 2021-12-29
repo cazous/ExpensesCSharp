@@ -46,11 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexão\Conexao.cs" />
+    <Compile Include="Data\AtualizarDados.cs" />
+    <Compile Include="Data\BuscarDados.cs" />
+    <Compile Include="Data\ExcluirDados.cs" />
+    <Compile Include="Data\InserirDados.cs" />
     <Compile Include="Forms\DetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DetailForm.Designer.cs">
       <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DataForm.cs">
       <SubType>Form</SubType>
@@ -64,13 +75,14 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagens\MensagensErro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\DataForm.resx">
       <DependentUpon>DataForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DetailForm.resx">
-      <DependentUpon>DetailForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
@@ -98,9 +110,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conexão\" />
-    <Folder Include="Data\" />
-    <Folder Include="Mensagens\" />
     <Folder Include="Validações\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

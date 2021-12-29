@@ -38,20 +38,24 @@ namespace ExpensesCSharp
             // 
             // buttonHome
             // 
+            this.buttonHome.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonHome.Location = new System.Drawing.Point(0, 0);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(47, 51);
+            this.buttonHome.Size = new System.Drawing.Size(47, 340);
             this.buttonHome.TabIndex = 0;
-            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonDetails
             // 
-            this.buttonDetails.Location = new System.Drawing.Point(0, 50);
+            this.buttonDetails.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDetails.Location = new System.Drawing.Point(0, 340);
             this.buttonDetails.Name = "buttonDetails";
-            this.buttonDetails.Size = new System.Drawing.Size(47, 51);
+            this.buttonDetails.Size = new System.Drawing.Size(47, 341);
             this.buttonDetails.TabIndex = 1;
-            this.buttonDetails.UseVisualStyleBackColor = true;
+            this.buttonDetails.UseVisualStyleBackColor = false;
             this.buttonDetails.Click += new System.EventHandler(this.buttonDetails_Click);
             // 
             // PainelPrincipal
@@ -64,18 +68,22 @@ namespace ExpensesCSharp
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(1266, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(24, 25);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1294, 681);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonDetails);
@@ -86,8 +94,6 @@ namespace ExpensesCSharp
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-
-            loadForm(new DataForm());
 
         }
 

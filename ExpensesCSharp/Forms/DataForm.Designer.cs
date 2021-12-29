@@ -28,105 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.HomeLabelData = new System.Windows.Forms.Label();
-            this.HomedateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblPagamento = new System.Windows.Forms.Label();
+            this.cmbPagamento = new System.Windows.Forms.ComboBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblData = new System.Windows.Forms.Label();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.tabelaDataForm = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStripDataForm = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxExcluir = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxEditar = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaDataForm)).BeginInit();
+            this.contextMenuStripDataForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // lblValor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1037, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "VALOR";
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(1037, 23);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(43, 13);
+            this.lblValor.TabIndex = 18;
+            this.lblValor.Text = "VALOR";
             // 
-            // textBox2
+            // txtValor
             // 
-            this.textBox2.Location = new System.Drawing.Point(1037, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 17;
+            this.txtValor.Location = new System.Drawing.Point(1037, 52);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(160, 20);
+            this.txtValor.TabIndex = 17;
+            this.txtValor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValor_KeyDown);
             // 
-            // label2
+            // lblPagamento
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(821, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "PAGAMENTO";
+            this.lblPagamento.AutoSize = true;
+            this.lblPagamento.Location = new System.Drawing.Point(821, 23);
+            this.lblPagamento.Name = "lblPagamento";
+            this.lblPagamento.Size = new System.Drawing.Size(75, 13);
+            this.lblPagamento.TabIndex = 16;
+            this.lblPagamento.Text = "PAGAMENTO";
             // 
-            // comboBox1
+            // cmbPagamento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(821, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cmbPagamento.FormattingEnabled = true;
+            this.cmbPagamento.Location = new System.Drawing.Point(821, 52);
+            this.cmbPagamento.Name = "cmbPagamento";
+            this.cmbPagamento.Size = new System.Drawing.Size(183, 21);
+            this.cmbPagamento.TabIndex = 15;
+            this.cmbPagamento.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label1
+            // lblDescricao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(243, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "DESCRIÇÃO";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(243, 23);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(69, 13);
+            this.lblDescricao.TabIndex = 14;
+            this.lblDescricao.Text = "DESCRIÇÃO";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(548, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtDescricao.Location = new System.Drawing.Point(243, 53);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(548, 20);
+            this.txtDescricao.TabIndex = 13;
+            this.txtDescricao.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // HomeLabelData
+            // lblData
             // 
-            this.HomeLabelData.AutoSize = true;
-            this.HomeLabelData.Location = new System.Drawing.Point(12, 23);
-            this.HomeLabelData.Name = "HomeLabelData";
-            this.HomeLabelData.Size = new System.Drawing.Size(36, 13);
-            this.HomeLabelData.TabIndex = 12;
-            this.HomeLabelData.Text = "DATA";
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(12, 23);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(36, 13);
+            this.lblData.TabIndex = 12;
+            this.lblData.Text = "DATA";
             // 
-            // HomedateTimePicker
+            // dtpData
             // 
-            this.HomedateTimePicker.Location = new System.Drawing.Point(15, 54);
-            this.HomedateTimePicker.Name = "HomedateTimePicker";
-            this.HomedateTimePicker.Size = new System.Drawing.Size(212, 20);
-            this.HomedateTimePicker.TabIndex = 11;
+            this.dtpData.Location = new System.Drawing.Point(15, 54);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(212, 20);
+            this.dtpData.TabIndex = 11;
             // 
-            // dataGridView1
+            // tabelaDataForm
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabelaDataForm.AllowUserToAddRows = false;
+            this.tabelaDataForm.AllowUserToDeleteRows = false;
+            this.tabelaDataForm.AllowUserToResizeColumns = false;
+            this.tabelaDataForm.AllowUserToResizeRows = false;
+            this.tabelaDataForm.BackgroundColor = System.Drawing.Color.White;
+            this.tabelaDataForm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tabelaDataForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaDataForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Data,
             this.Descrição,
             this.Pagamento,
             this.Valor});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1203, 547);
-            this.dataGridView1.TabIndex = 19;
+            this.tabelaDataForm.ContextMenuStrip = this.contextMenuStripDataForm;
+            this.tabelaDataForm.GridColor = System.Drawing.Color.White;
+            this.tabelaDataForm.Location = new System.Drawing.Point(6, 105);
+            this.tabelaDataForm.MultiSelect = false;
+            this.tabelaDataForm.Name = "tabelaDataForm";
+            this.tabelaDataForm.RowHeadersVisible = false;
+            this.tabelaDataForm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabelaDataForm.Size = new System.Drawing.Size(1203, 547);
+            this.tabelaDataForm.TabIndex = 19;
+            this.tabelaDataForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaDataForm_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // Data
             // 
+            this.Data.DataPropertyName = "data";
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
             this.Data.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -134,40 +161,66 @@
             // 
             // Descrição
             // 
+            this.Descrição.DataPropertyName = "descricao";
             this.Descrição.HeaderText = "Descrição";
             this.Descrição.Name = "Descrição";
             this.Descrição.Width = 590;
             // 
             // Pagamento
             // 
+            this.Pagamento.DataPropertyName = "pagamento";
             this.Pagamento.HeaderText = "Pagamento";
             this.Pagamento.Name = "Pagamento";
             this.Pagamento.Width = 200;
             // 
             // Valor
             // 
+            this.Valor.DataPropertyName = "valor";
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.Width = 160;
+            // 
+            // contextMenuStripDataForm
+            // 
+            this.contextMenuStripDataForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ctxEditar,
+            this.ctxExcluir});
+            this.contextMenuStripDataForm.Name = "contextMenuStripDataForm";
+            this.contextMenuStripDataForm.Size = new System.Drawing.Size(110, 48);
+            // 
+            // ctxExcluir
+            // 
+            this.ctxExcluir.Name = "ctxExcluir";
+            this.ctxExcluir.Size = new System.Drawing.Size(180, 22);
+            this.ctxExcluir.Text = "Excluir";
+            this.ctxExcluir.Click += new System.EventHandler(this.ctxExcluir_Click);
+            // 
+            // ctxEditar
+            // 
+            this.ctxEditar.Name = "ctxEditar";
+            this.ctxEditar.Size = new System.Drawing.Size(180, 22);
+            this.ctxEditar.Text = "Editar";
             // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1213, 654);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.HomeLabelData);
-            this.Controls.Add(this.HomedateTimePicker);
+            this.Controls.Add(this.tabelaDataForm);
+            this.Controls.Add(this.lblValor);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.lblPagamento);
+            this.Controls.Add(this.cmbPagamento);
+            this.Controls.Add(this.lblDescricao);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.lblData);
+            this.Controls.Add(this.dtpData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DataForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaDataForm)).EndInit();
+            this.contextMenuStripDataForm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,18 +228,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label HomeLabelData;
-        private System.Windows.Forms.DateTimePicker HomedateTimePicker;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Label lblPagamento;
+        private System.Windows.Forms.ComboBox cmbPagamento;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.DataGridView tabelaDataForm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripDataForm;
+        private System.Windows.Forms.ToolStripMenuItem ctxEditar;
+        private System.Windows.Forms.ToolStripMenuItem ctxExcluir;
     }
 }

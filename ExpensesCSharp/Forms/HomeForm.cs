@@ -1,4 +1,5 @@
-﻿using ExpensesCSharp.Forms;
+﻿using ExpensesCSharp.Conexão;
+using ExpensesCSharp.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace ExpensesCSharp
         public Form1()
         {
             InitializeComponent();
+            loadForm(new DataForm());
         }
 
         public void loadForm(object _form)
@@ -42,7 +44,11 @@ namespace ExpensesCSharp
 
             loadForm(new DataForm());
             buttonHome.Enabled = false;
+            buttonHome.BackColor = Color.SteelBlue;
             buttonDetails.Enabled = true;
+            buttonDetails.BackColor = Color.LightSkyBlue;
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,9 +63,11 @@ namespace ExpensesCSharp
 
         private void buttonDetails_Click(object sender, EventArgs e)
         {
-            loadForm(new DetailForm());
+            loadForm(new FilterForm());
             buttonHome.Enabled = true;
+            buttonHome.BackColor = Color.LightSkyBlue;
             buttonDetails.Enabled = false;
+            buttonDetails.BackColor = Color.SteelBlue;
         }
 
         private void PainelPrincipal_Paint(object sender, PaintEventArgs e)

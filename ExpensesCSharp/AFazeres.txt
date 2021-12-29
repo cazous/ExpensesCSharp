@@ -1,0 +1,7 @@
+﻿- ContextMenu para tabela FilterForm
+- Mensagens de confirmação para exclusão
+- Mensagens de confirmação para update
+- Ajeitar layout da tabela filterform
+- ADD buscas por filtro
+- ADD mensagens de erro para todos os métodos de dados
+- Desenhar DetailForm
