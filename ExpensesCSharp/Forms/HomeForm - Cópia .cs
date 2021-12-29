@@ -40,7 +40,7 @@ namespace ExpensesCSharp
         private void button1_Click(object sender, EventArgs e)
         {
 
-            loadForm(new DataForm());
+            loadForm(new Form1());
             buttonHome.Enabled = false;
             buttonDetails.Enabled = true;
         }
@@ -60,16 +60,6 @@ namespace ExpensesCSharp
             loadForm(new DetailForm());
             buttonHome.Enabled = true;
             buttonDetails.Enabled = false;
-        }
-
-        private void PainelPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

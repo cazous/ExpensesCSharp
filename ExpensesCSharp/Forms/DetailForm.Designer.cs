@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.DetailBTNAno = new System.Windows.Forms.Button();
             this.DetailBTNMes = new System.Windows.Forms.Button();
             this.DetailBTNBuscar = new System.Windows.Forms.Button();
@@ -36,7 +35,6 @@
             this.DetailLabelInicio = new System.Windows.Forms.Label();
             this.DetailDateFim = new System.Windows.Forms.DateTimePicker();
             this.DetailDateInicio = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.labelNumberDebito = new System.Windows.Forms.Label();
             this.labelNumberPix = new System.Windows.Forms.Label();
             this.labelNumberCC = new System.Windows.Forms.Label();
@@ -46,35 +44,17 @@
             this.labelCC = new System.Windows.Forms.Label();
             this.labelGastosTotais = new System.Windows.Forms.Label();
             this.DetailLabelEstatistica = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DetailBTNAno);
-            this.panel1.Controls.Add(this.DetailBTNMes);
-            this.panel1.Controls.Add(this.DetailBTNBuscar);
-            this.panel1.Controls.Add(this.DetailLabelFim);
-            this.panel1.Controls.Add(this.DetailLabelInicio);
-            this.panel1.Controls.Add(this.DetailDateFim);
-            this.panel1.Controls.Add(this.DetailDateInicio);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 185);
-            this.panel1.TabIndex = 0;
-            // 
             // DetailBTNAno
             // 
-            this.DetailBTNAno.Location = new System.Drawing.Point(3, 152);
+            this.DetailBTNAno.Location = new System.Drawing.Point(7, 157);
             this.DetailBTNAno.Name = "DetailBTNAno";
             this.DetailBTNAno.Size = new System.Drawing.Size(192, 23);
             this.DetailBTNAno.TabIndex = 6;
@@ -83,7 +63,7 @@
             // 
             // DetailBTNMes
             // 
-            this.DetailBTNMes.Location = new System.Drawing.Point(3, 123);
+            this.DetailBTNMes.Location = new System.Drawing.Point(7, 128);
             this.DetailBTNMes.Name = "DetailBTNMes";
             this.DetailBTNMes.Size = new System.Drawing.Size(192, 23);
             this.DetailBTNMes.TabIndex = 5;
@@ -92,7 +72,7 @@
             // 
             // DetailBTNBuscar
             // 
-            this.DetailBTNBuscar.Location = new System.Drawing.Point(3, 94);
+            this.DetailBTNBuscar.Location = new System.Drawing.Point(7, 99);
             this.DetailBTNBuscar.Name = "DetailBTNBuscar";
             this.DetailBTNBuscar.Size = new System.Drawing.Size(192, 23);
             this.DetailBTNBuscar.TabIndex = 4;
@@ -102,7 +82,7 @@
             // DetailLabelFim
             // 
             this.DetailLabelFim.AutoSize = true;
-            this.DetailLabelFim.Location = new System.Drawing.Point(12, 47);
+            this.DetailLabelFim.Location = new System.Drawing.Point(16, 52);
             this.DetailLabelFim.Name = "DetailLabelFim";
             this.DetailLabelFim.Size = new System.Drawing.Size(23, 13);
             this.DetailLabelFim.TabIndex = 3;
@@ -111,7 +91,7 @@
             // DetailLabelInicio
             // 
             this.DetailLabelInicio.AutoSize = true;
-            this.DetailLabelInicio.Location = new System.Drawing.Point(12, 4);
+            this.DetailLabelInicio.Location = new System.Drawing.Point(16, 9);
             this.DetailLabelInicio.Name = "DetailLabelInicio";
             this.DetailLabelInicio.Size = new System.Drawing.Size(32, 13);
             this.DetailLabelInicio.TabIndex = 2;
@@ -119,38 +99,22 @@
             // 
             // DetailDateFim
             // 
-            this.DetailDateFim.Location = new System.Drawing.Point(3, 67);
+            this.DetailDateFim.Location = new System.Drawing.Point(7, 72);
             this.DetailDateFim.Name = "DetailDateFim";
             this.DetailDateFim.Size = new System.Drawing.Size(192, 20);
             this.DetailDateFim.TabIndex = 1;
             // 
             // DetailDateInicio
             // 
-            this.DetailDateInicio.Location = new System.Drawing.Point(3, 22);
+            this.DetailDateInicio.Location = new System.Drawing.Point(7, 27);
             this.DetailDateInicio.Name = "DetailDateInicio";
             this.DetailDateInicio.Size = new System.Drawing.Size(192, 20);
             this.DetailDateInicio.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.labelNumberDebito);
-            this.panel2.Controls.Add(this.labelNumberPix);
-            this.panel2.Controls.Add(this.labelNumberCC);
-            this.panel2.Controls.Add(this.labelValorGastosTotais);
-            this.panel2.Controls.Add(this.labelDebito);
-            this.panel2.Controls.Add(this.labelPix);
-            this.panel2.Controls.Add(this.labelCC);
-            this.panel2.Controls.Add(this.labelGastosTotais);
-            this.panel2.Controls.Add(this.DetailLabelEstatistica);
-            this.panel2.Location = new System.Drawing.Point(1, 188);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 261);
-            this.panel2.TabIndex = 1;
-            // 
             // labelNumberDebito
             // 
             this.labelNumberDebito.AutoSize = true;
-            this.labelNumberDebito.Location = new System.Drawing.Point(72, 135);
+            this.labelNumberDebito.Location = new System.Drawing.Point(72, 320);
             this.labelNumberDebito.Name = "labelNumberDebito";
             this.labelNumberDebito.Size = new System.Drawing.Size(0, 13);
             this.labelNumberDebito.TabIndex = 8;
@@ -158,7 +122,7 @@
             // labelNumberPix
             // 
             this.labelNumberPix.AutoSize = true;
-            this.labelNumberPix.Location = new System.Drawing.Point(55, 109);
+            this.labelNumberPix.Location = new System.Drawing.Point(55, 294);
             this.labelNumberPix.Name = "labelNumberPix";
             this.labelNumberPix.Size = new System.Drawing.Size(0, 13);
             this.labelNumberPix.TabIndex = 7;
@@ -166,7 +130,7 @@
             // labelNumberCC
             // 
             this.labelNumberCC.AutoSize = true;
-            this.labelNumberCC.Location = new System.Drawing.Point(111, 82);
+            this.labelNumberCC.Location = new System.Drawing.Point(120, 267);
             this.labelNumberCC.Name = "labelNumberCC";
             this.labelNumberCC.Size = new System.Drawing.Size(0, 13);
             this.labelNumberCC.TabIndex = 6;
@@ -174,7 +138,7 @@
             // labelValorGastosTotais
             // 
             this.labelValorGastosTotais.AutoSize = true;
-            this.labelValorGastosTotais.Location = new System.Drawing.Point(111, 43);
+            this.labelValorGastosTotais.Location = new System.Drawing.Point(111, 228);
             this.labelValorGastosTotais.Name = "labelValorGastosTotais";
             this.labelValorGastosTotais.Size = new System.Drawing.Size(0, 13);
             this.labelValorGastosTotais.TabIndex = 5;
@@ -182,7 +146,7 @@
             // labelDebito
             // 
             this.labelDebito.AutoSize = true;
-            this.labelDebito.Location = new System.Drawing.Point(17, 135);
+            this.labelDebito.Location = new System.Drawing.Point(17, 320);
             this.labelDebito.Name = "labelDebito";
             this.labelDebito.Size = new System.Drawing.Size(41, 13);
             this.labelDebito.TabIndex = 4;
@@ -191,7 +155,7 @@
             // labelPix
             // 
             this.labelPix.AutoSize = true;
-            this.labelPix.Location = new System.Drawing.Point(17, 109);
+            this.labelPix.Location = new System.Drawing.Point(17, 294);
             this.labelPix.Name = "labelPix";
             this.labelPix.Size = new System.Drawing.Size(27, 13);
             this.labelPix.TabIndex = 3;
@@ -200,7 +164,7 @@
             // labelCC
             // 
             this.labelCC.AutoSize = true;
-            this.labelCC.Location = new System.Drawing.Point(15, 82);
+            this.labelCC.Location = new System.Drawing.Point(17, 267);
             this.labelCC.Name = "labelCC";
             this.labelCC.Size = new System.Drawing.Size(92, 13);
             this.labelCC.TabIndex = 2;
@@ -210,7 +174,7 @@
             // labelGastosTotais
             // 
             this.labelGastosTotais.AutoSize = true;
-            this.labelGastosTotais.Location = new System.Drawing.Point(15, 43);
+            this.labelGastosTotais.Location = new System.Drawing.Point(15, 228);
             this.labelGastosTotais.Name = "labelGastosTotais";
             this.labelGastosTotais.Size = new System.Drawing.Size(75, 13);
             this.labelGastosTotais.TabIndex = 1;
@@ -219,20 +183,12 @@
             // DetailLabelEstatistica
             // 
             this.DetailLabelEstatistica.AutoSize = true;
-            this.DetailLabelEstatistica.Location = new System.Drawing.Point(12, 11);
+            this.DetailLabelEstatistica.Location = new System.Drawing.Point(12, 196);
             this.DetailLabelEstatistica.Name = "DetailLabelEstatistica";
             this.DetailLabelEstatistica.Size = new System.Drawing.Size(65, 13);
             this.DetailLabelEstatistica.TabIndex = 0;
             this.DetailLabelEstatistica.Text = "Estatísticas:";
             this.DetailLabelEstatistica.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(202, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(597, 448);
-            this.panel3.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -242,11 +198,10 @@
             this.Descrição,
             this.Pagamento,
             this.Valor});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(212, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(597, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(998, 642);
             this.dataGridView1.TabIndex = 0;
             // 
             // Data
@@ -275,27 +230,35 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1213, 654);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.labelNumberDebito);
+            this.Controls.Add(this.DetailBTNAno);
+            this.Controls.Add(this.labelNumberPix);
+            this.Controls.Add(this.labelNumberCC);
+            this.Controls.Add(this.labelValorGastosTotais);
+            this.Controls.Add(this.DetailBTNMes);
+            this.Controls.Add(this.labelDebito);
+            this.Controls.Add(this.DetailBTNBuscar);
+            this.Controls.Add(this.labelPix);
+            this.Controls.Add(this.DetailLabelInicio);
+            this.Controls.Add(this.labelCC);
+            this.Controls.Add(this.DetailLabelFim);
+            this.Controls.Add(this.labelGastosTotais);
+            this.Controls.Add(this.DetailDateInicio);
+            this.Controls.Add(this.DetailLabelEstatistica);
+            this.Controls.Add(this.DetailDateFim);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detail";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button DetailBTNAno;
         private System.Windows.Forms.Button DetailBTNMes;
         private System.Windows.Forms.Button DetailBTNBuscar;

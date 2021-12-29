@@ -10,3 +10,4 @@ C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCShar
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.csproj.CoreCompileInputs.cache
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.exe
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.pdb
+C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DataForm.resources
