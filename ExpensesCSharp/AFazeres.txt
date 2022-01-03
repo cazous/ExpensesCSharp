@@ -4,4 +4,3 @@
 - Ajeitar layout da tabela filterform
 - ADD buscas por filtro
 - ADD mensagens de erro para todos os métodos de dados
-- Desenhar DetailForm

@@ -198,12 +198,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Data,
             this.Descrição,
             this.Pagamento,
             this.Valor});
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(212, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -220,19 +222,21 @@
             // 
             this.Descrição.HeaderText = "Descrição";
             this.Descrição.Name = "Descrição";
-            this.Descrição.Width = 255;
+            this.Descrição.Width = 480;
             // 
             // Pagamento
             // 
             this.Pagamento.HeaderText = "Pagamento";
             this.Pagamento.Name = "Pagamento";
+            this.Pagamento.Width = 200;
             // 
             // Valor
             // 
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
+            this.Valor.Width = 180;
             // 
-            // DetailForm
+            // FilterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +260,7 @@
             this.Controls.Add(this.DetailLabelEstatistica);
             this.Controls.Add(this.DetailDateFim);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DetailForm";
+            this.Name = "FilterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detail";
             this.Load += new System.EventHandler(this.DetailForm_Load);
@@ -280,13 +284,13 @@
         private System.Windows.Forms.Label labelCC;
         private System.Windows.Forms.Label labelDebito;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pagamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.Label labelNumberDebito;
         private System.Windows.Forms.Label labelNumberPix;
         private System.Windows.Forms.Label labelNumberCC;
         private System.Windows.Forms.Label labelValorGastosTotais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pagamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
     }
 }

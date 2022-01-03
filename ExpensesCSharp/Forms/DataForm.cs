@@ -17,10 +17,11 @@ namespace ExpensesCSharp.Forms
         BuscarDados buscarDados = new BuscarDados();
         AtualizarDados atualizarDados = new AtualizarDados();
         ExcluirDados excluirDados = new ExcluirDados();
+        
         public DataForm()
         {
             InitializeComponent();
-            buscarDados.PreencherTabelaDetailForm(tabelaDataForm);
+            atualizarTabela();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -35,8 +36,20 @@ namespace ExpensesCSharp.Forms
 
         private void txtValor_KeyDown(object sender, KeyEventArgs e)
         {
-            //if(e.KeyCode == Keys.Enter)
-            //Validar preenchimento dos outros campos
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (dtpData.Value == null || txtDescricao.Text == "" || txtValor.Text == "")
+                {
+                    //mensagem de erro
+                }
+                else
+                {
+                    inserirDados.InserirGasto(dtpData.Value, txtDescricao.Text, (String)cmbPagamento.SelectedItem, Decimal.Parse(txtValor.Text));
+                    atualizarTabela();
+
+                }
+            }
+           
         }
 
         private void tabelaDataForm_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,5 +69,24 @@ namespace ExpensesCSharp.Forms
         {
             buscarDados.PreencherTabelaDetailForm(tabelaDataForm);
         }
+
+        private void txtValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctxEditar_Click(object sender, EventArgs e)
+        {
+            DetailForm detailForm = new DetailForm(int.Parse(tabelaDataForm.SelectedCells[0].Value.ToString()));
+            //detailForm.Show();Mostra form na tela pro usuario permitindo clique no form anterior
+            detailForm.ShowDialog(); //Mostra form sem permitir o clique no form anterior
+            
+        }
+
+        private void dtpData_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 }

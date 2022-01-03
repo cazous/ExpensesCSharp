@@ -44,8 +44,8 @@
             this.Pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripDataForm = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ctxExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxExcluir = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaDataForm)).BeginInit();
             this.contextMenuStripDataForm.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(160, 20);
             this.txtValor.TabIndex = 17;
+            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             this.txtValor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValor_KeyDown);
             // 
             // lblPagamento
@@ -79,6 +80,10 @@
             // cmbPagamento
             // 
             this.cmbPagamento.FormattingEnabled = true;
+            this.cmbPagamento.Items.AddRange(new object[] {
+            "Débito",
+            "Cartão de Crédito",
+            "PIX"});
             this.cmbPagamento.Location = new System.Drawing.Point(821, 52);
             this.cmbPagamento.Name = "cmbPagamento";
             this.cmbPagamento.Size = new System.Drawing.Size(183, 21);
@@ -117,6 +122,7 @@
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(212, 20);
             this.dtpData.TabIndex = 11;
+            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
             // tabelaDataForm
             // 
@@ -188,18 +194,19 @@
             this.contextMenuStripDataForm.Name = "contextMenuStripDataForm";
             this.contextMenuStripDataForm.Size = new System.Drawing.Size(110, 48);
             // 
-            // ctxExcluir
-            // 
-            this.ctxExcluir.Name = "ctxExcluir";
-            this.ctxExcluir.Size = new System.Drawing.Size(180, 22);
-            this.ctxExcluir.Text = "Excluir";
-            this.ctxExcluir.Click += new System.EventHandler(this.ctxExcluir_Click);
-            // 
             // ctxEditar
             // 
             this.ctxEditar.Name = "ctxEditar";
             this.ctxEditar.Size = new System.Drawing.Size(180, 22);
             this.ctxEditar.Text = "Editar";
+            this.ctxEditar.Click += new System.EventHandler(this.ctxEditar_Click);
+            // 
+            // ctxExcluir
+            // 
+            this.ctxExcluir.Name = "ctxExcluir";
+            this.ctxExcluir.Size = new System.Drawing.Size(109, 22);
+            this.ctxExcluir.Text = "Excluir";
+            this.ctxExcluir.Click += new System.EventHandler(this.ctxExcluir_Click);
             // 
             // DataForm
             // 

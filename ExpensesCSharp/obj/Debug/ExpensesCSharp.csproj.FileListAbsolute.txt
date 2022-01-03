@@ -11,3 +11,4 @@ C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCShar
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.pdb
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DataForm.resources
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.FilterForm.resources
+C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DetailForm.resources
