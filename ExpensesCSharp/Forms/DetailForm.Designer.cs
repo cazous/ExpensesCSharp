@@ -34,10 +34,12 @@
             this.dtpDetailForm = new System.Windows.Forms.DateTimePicker();
             this.cbDetailForm = new System.Windows.Forms.ComboBox();
             this.txtDetailFormValor = new System.Windows.Forms.TextBox();
+            this.lblDetailFormId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDetailFormUpdate
             // 
+            this.btnDetailFormUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDetailFormUpdate.Location = new System.Drawing.Point(126, 412);
             this.btnDetailFormUpdate.Name = "btnDetailFormUpdate";
             this.btnDetailFormUpdate.Size = new System.Drawing.Size(200, 35);
@@ -54,6 +56,7 @@
             this.btnDetailFormCancel.TabIndex = 1;
             this.btnDetailFormCancel.Text = "Cancel";
             this.btnDetailFormCancel.UseVisualStyleBackColor = true;
+            this.btnDetailFormCancel.Click += new System.EventHandler(this.btnDetailFormCancel_Click);
             // 
             // txtDetailFormDescricao
             // 
@@ -82,7 +85,6 @@
             this.cbDetailForm.Name = "cbDetailForm";
             this.cbDetailForm.Size = new System.Drawing.Size(200, 21);
             this.cbDetailForm.TabIndex = 4;
-            this.cbDetailForm.Visible = false;
             this.cbDetailForm.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtDetailFormValor
@@ -92,12 +94,22 @@
             this.txtDetailFormValor.Size = new System.Drawing.Size(200, 20);
             this.txtDetailFormValor.TabIndex = 5;
             // 
+            // lblDetailFormId
+            // 
+            this.lblDetailFormId.AutoSize = true;
+            this.lblDetailFormId.Location = new System.Drawing.Point(27, 13);
+            this.lblDetailFormId.Name = "lblDetailFormId";
+            this.lblDetailFormId.Size = new System.Drawing.Size(18, 13);
+            this.lblDetailFormId.TabIndex = 6;
+            this.lblDetailFormId.Text = "ID";
+            // 
             // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(450, 488);
+            this.Controls.Add(this.lblDetailFormId);
             this.Controls.Add(this.txtDetailFormValor);
             this.Controls.Add(this.cbDetailForm);
             this.Controls.Add(this.dtpDetailForm);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.DateTimePicker dtpDetailForm;
         private System.Windows.Forms.ComboBox cbDetailForm;
         private System.Windows.Forms.TextBox txtDetailFormValor;
+        private System.Windows.Forms.Label lblDetailFormId;
     }
 }

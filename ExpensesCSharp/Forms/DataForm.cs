@@ -1,4 +1,5 @@
 ﻿using ExpensesCSharp.Data;
+using ExpensesCSharp.Mensagens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,16 +18,30 @@ namespace ExpensesCSharp.Forms
         BuscarDados buscarDados = new BuscarDados();
         AtualizarDados atualizarDados = new AtualizarDados();
         ExcluirDados excluirDados = new ExcluirDados();
-        
+        MensagensErro mensagensErro = new MensagensErro();
+        MensagensConfirmacao mensagensConfirmacao = new MensagensConfirmacao();
         public DataForm()
         {
             InitializeComponent();
             atualizarTabela();
+            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtDescricao_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtDescricao.Text == "" || txtValor.Text == "")
+                {
+                    mensagensErro.ErroDeInsercaoIns002();
+                }
+                else
+                {
+                    inserirDados.InserirGasto(dtpData.Value, txtDescricao.Text, (String)cmbPagamento.SelectedItem, Decimal.Parse(txtValor.Text));
+                    atualizarTabela();
 
+                }
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,9 +53,9 @@ namespace ExpensesCSharp.Forms
         {
             if(e.KeyCode == Keys.Enter)
             {
-                if (dtpData.Value == null || txtDescricao.Text == "" || txtValor.Text == "")
+                if (txtDescricao.Text == "" || txtValor.Text == "")
                 {
-                    //mensagem de erro
+                    mensagensErro.ErroDeInsercaoIns002();
                 }
                 else
                 {
@@ -60,14 +75,14 @@ namespace ExpensesCSharp.Forms
         private void ctxExcluir_Click(object sender, EventArgs e)
         {
             int idGasto = int.Parse(tabelaDataForm.SelectedCells[0].Value.ToString());
-            excluirDados.deletarGasto(idGasto);
+           mensagensConfirmacao.ConfirmarExclusao(idGasto);
             atualizarTabela();
 
         }
 
         private void atualizarTabela()
         {
-            buscarDados.PreencherTabelaDetailForm(tabelaDataForm);
+            buscarDados.PreencherTabelas(tabelaDataForm);
         }
 
         private void txtValor_TextChanged(object sender, EventArgs e)
@@ -87,6 +102,10 @@ namespace ExpensesCSharp.Forms
         {
 
         }
-       
+
+        private void btnDataFormAtualizar_Click(object sender, EventArgs e)
+        {
+            atualizarTabela();
+        }
     }
 }

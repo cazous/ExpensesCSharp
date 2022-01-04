@@ -75,6 +75,7 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagens\MensagensConfirmacao.cs" />
     <Compile Include="Mensagens\MensagensErro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

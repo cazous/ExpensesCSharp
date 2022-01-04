@@ -35,7 +35,7 @@ namespace ExpensesCSharp.Data
             }
             catch (Exception e)
             {
-                mensagensErro.ErroDeInsercaoGastos(e);
+                mensagensErro.ErroDeInsercaoIns001(e);
             }
         }
     }

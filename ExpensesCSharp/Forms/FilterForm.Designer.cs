@@ -44,12 +44,13 @@
             this.labelCC = new System.Windows.Forms.Label();
             this.labelGastosTotais = new System.Windows.Forms.Label();
             this.DetailLabelEstatistica = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabelaFilterForm = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFilterForm)).BeginInit();
             this.SuspendLayout();
             // 
             // DetailBTNAno
@@ -84,6 +85,7 @@
             this.DetailBTNBuscar.TabIndex = 4;
             this.DetailBTNBuscar.Text = "BUSCAR";
             this.DetailBTNBuscar.UseVisualStyleBackColor = false;
+            this.DetailBTNBuscar.Click += new System.EventHandler(this.DetailBTNBuscar_Click);
             // 
             // DetailLabelFim
             // 
@@ -196,44 +198,61 @@
             this.DetailLabelEstatistica.Text = "Estatísticas:";
             this.DetailLabelEstatistica.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // tabelaFilterForm
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabelaFilterForm.BackgroundColor = System.Drawing.Color.White;
+            this.tabelaFilterForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaFilterForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Data,
             this.Descrição,
             this.Pagamento,
             this.Valor});
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(212, 9);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(998, 642);
-            this.dataGridView1.TabIndex = 0;
+            this.tabelaFilterForm.GridColor = System.Drawing.Color.White;
+            this.tabelaFilterForm.Location = new System.Drawing.Point(212, 9);
+            this.tabelaFilterForm.Name = "tabelaFilterForm";
+            this.tabelaFilterForm.RowHeadersVisible = false;
+            this.tabelaFilterForm.Size = new System.Drawing.Size(998, 642);
+            this.tabelaFilterForm.TabIndex = 0;
+            this.tabelaFilterForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // Data
             // 
+            this.Data.DataPropertyName = "data";
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
+            this.Data.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Data.Width = 140;
             // 
             // Descrição
             // 
+            this.Descrição.DataPropertyName = "descricao";
             this.Descrição.HeaderText = "Descrição";
             this.Descrição.Name = "Descrição";
+            this.Descrição.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Descrição.Width = 480;
             // 
             // Pagamento
             // 
+            this.Pagamento.DataPropertyName = "pagamento";
             this.Pagamento.HeaderText = "Pagamento";
             this.Pagamento.Name = "Pagamento";
+            this.Pagamento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Pagamento.Width = 200;
             // 
             // Valor
             // 
+            this.Valor.DataPropertyName = "valor";
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
+            this.Valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Valor.Width = 180;
             // 
             // FilterForm
@@ -242,7 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1213, 654);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tabelaFilterForm);
             this.Controls.Add(this.labelNumberDebito);
             this.Controls.Add(this.DetailBTNAno);
             this.Controls.Add(this.labelNumberPix);
@@ -264,7 +283,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detail";
             this.Load += new System.EventHandler(this.DetailForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFilterForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,11 +302,12 @@
         private System.Windows.Forms.Label labelPix;
         private System.Windows.Forms.Label labelCC;
         private System.Windows.Forms.Label labelDebito;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tabelaFilterForm;
         private System.Windows.Forms.Label labelNumberDebito;
         private System.Windows.Forms.Label labelNumberPix;
         private System.Windows.Forms.Label labelNumberCC;
         private System.Windows.Forms.Label labelValorGastosTotais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pagamento;

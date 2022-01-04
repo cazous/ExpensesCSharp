@@ -13,12 +13,10 @@ namespace ExpensesCSharp.Data
 {
     internal class BuscarDados : Conexao
     {
+        DataTable datatable = new DataTable();
         MensagensErro mensagensErro = new MensagensErro();
-        public void PreencherTabelaDetailForm(DataGridView _tabela)
+        public void PreencherTabelas(DataGridView _tabela)
         {
-            DataTable datatable = new DataTable();
-
-            {
                 try
                 {
                     using (SqlConnection con = OpenConnection())
@@ -33,8 +31,31 @@ namespace ExpensesCSharp.Data
                 }
                 catch (Exception e)
                 {
-                    //Mensagem de erro
+                    mensagensErro.ErroDeBuscaBus001(e);
                 }
+            
+        }
+
+        public void BuscarPorData(DataGridView _tabela, DateTime _dataInicial, DateTime _dataFinal)
+        {
+            
+            try
+            {
+                using(SqlConnection con = OpenConnection())
+                {
+                    string querySelecao = "SELECT * FROM Expense WHERE [data] BETWEEN @dataInicial AND @dataFinal";
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
+                    adapter.SelectCommand.Parameters.AddWithValue("@dataInicial", _dataInicial);
+                    adapter.SelectCommand.Parameters.AddWithValue("@dataFinal", _dataFinal);
+                    adapter.SelectCommand.ExecuteNonQuery();
+                    adapter.Fill(datatable);
+                    _tabela.DataSource = datatable;
+                }
+            }
+            catch (Exception e)
+            {
+
+                //Mensagem de erro
             }
         }
     }
