@@ -8,6 +8,7 @@ DetailForm:
 - Atualizar OK
 - Atualizar sem campos (mensagem de erro) OK
 - Cancelar OK
+- Receber informações ja cadastradas
 * Tabela do form Data tem que ser atualizada quando o botão update for clicado
 
 FilterForm:

@@ -47,6 +47,8 @@ namespace ExpensesCSharp.Forms
 
         private void DetailBTNBuscar_Click(object sender, EventArgs e)
         {
+            //tabelaFilterForm.DataSource = null;
+            //tabelaFilterForm.Rows.Clear();
             //Limpar a tabela antes da busca
             buscarDados.BuscarPorData(tabelaFilterForm, DetailDateInicio.Value, DetailDateFim.Value);
         }

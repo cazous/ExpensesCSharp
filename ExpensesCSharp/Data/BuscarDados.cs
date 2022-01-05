@@ -13,43 +13,44 @@ namespace ExpensesCSharp.Data
 {
     internal class BuscarDados : Conexao
     {
-        DataTable datatable = new DataTable();
         MensagensErro mensagensErro = new MensagensErro();
         public void PreencherTabelas(DataGridView _tabela)
         {
-                try
+            DataTable datatable = new DataTable();
+            try
+            {
+                using (SqlConnection con = OpenConnection())
                 {
-                    using (SqlConnection con = OpenConnection())
-                    {
-                        string querySelecao = "SELECT id, [data], descricao, pagamento, valor FROM Expense";
-                        SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con); //Executor da query se seleção
-                        adapter.SelectCommand.ExecuteNonQuery(); //Execução
-                        adapter.Fill(datatable); //Preenchimento objeto tabela (datatable)
-                        _tabela.DataSource = datatable; //Atribuindo tabela de dados como fonte de dados para o parametro
-                    }
+                    string querySelecao = "SELECT id, [data], descricao, pagamento, valor FROM Expense";
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con); //Executor da query se seleção
+                    adapter.SelectCommand.ExecuteNonQuery(); //Execução
+                    adapter.Fill(datatable); //Preenchimento objeto tabela (datatable)
+                    _tabela.DataSource = datatable; //Atribuindo tabela de dados como fonte de dados para o parametro
+                }
 
-                }
-                catch (Exception e)
-                {
-                    mensagensErro.ErroDeBuscaBus001(e);
-                }
-            
+            }
+            catch (Exception e)
+            {
+                mensagensErro.ErroDeBuscaBus001(e);
+            }
+
         }
 
         public void BuscarPorData(DataGridView _tabela, DateTime _dataInicial, DateTime _dataFinal)
         {
-            
+            DataTable datatable = new DataTable();
             try
             {
-                using(SqlConnection con = OpenConnection())
+                using (SqlConnection con = OpenConnection())
                 {
                     string querySelecao = "SELECT * FROM Expense WHERE [data] BETWEEN @dataInicial AND @dataFinal";
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@dataInicial", _dataInicial);
                     adapter.SelectCommand.Parameters.AddWithValue("@dataFinal", _dataFinal);
-                    adapter.SelectCommand.ExecuteNonQuery();
+                    //adapter.SelectCommand.ExecuteNonQuery();
                     adapter.Fill(datatable);
                     _tabela.DataSource = datatable;
+
                 }
             }
             catch (Exception e)

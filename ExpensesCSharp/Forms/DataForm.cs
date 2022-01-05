@@ -80,7 +80,7 @@ namespace ExpensesCSharp.Forms
 
         }
 
-        private void atualizarTabela()
+        public void atualizarTabela()
         {
             buscarDados.PreencherTabelas(tabelaDataForm);
         }
@@ -92,9 +92,15 @@ namespace ExpensesCSharp.Forms
 
         private void ctxEditar_Click(object sender, EventArgs e)
         {
-            DetailForm detailForm = new DetailForm(int.Parse(tabelaDataForm.SelectedCells[0].Value.ToString()));
+            //DetailForm detailForm = new DetailForm(int.Parse(tabelaDataForm.SelectedCells[0].Value.ToString()));
             //detailForm.Show();Mostra form na tela pro usuario permitindo clique no form anterior
-            detailForm.ShowDialog(); //Mostra form sem permitir o clique no form anterior
+            //detailForm.ShowDialog(); //Mostra form sem permitir o clique no form anterior
+
+            //
+            DetailForm detailForm = new DetailForm(int.Parse(tabelaDataForm.SelectedCells[0].Value.ToString()),this, tabelaDataForm);
+            lblIdGasto.Text = tabelaDataForm.SelectedCells[0].Value.ToString();
+            detailForm.ShowDialog();
+            atualizarTabela();
             
         }
 
@@ -102,10 +108,6 @@ namespace ExpensesCSharp.Forms
         {
 
         }
-
-        private void btnDataFormAtualizar_Click(object sender, EventArgs e)
-        {
-            atualizarTabela();
-        }
+     
     }
 }
