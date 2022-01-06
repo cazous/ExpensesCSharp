@@ -52,5 +52,15 @@ namespace ExpensesCSharp.Forms
             //Limpar a tabela antes da busca
             buscarDados.BuscarPorData(tabelaFilterForm, DetailDateInicio.Value, DetailDateFim.Value);
         }
+
+        private void DetailBTNMes_Click(object sender, EventArgs e)
+        {
+            buscarDados.BuscarUltimoMes(tabelaFilterForm);
+        }
+
+        private void DetailBTNAno_Click(object sender, EventArgs e)
+        {
+            buscarDados.BuscarUltimoAno(tabelaFilterForm);
+        }
     }
 }

@@ -63,6 +63,7 @@
             this.DetailBTNAno.TabIndex = 6;
             this.DetailBTNAno.Text = "Último Ano";
             this.DetailBTNAno.UseVisualStyleBackColor = false;
+            this.DetailBTNAno.Click += new System.EventHandler(this.DetailBTNAno_Click);
             // 
             // DetailBTNMes
             // 
@@ -74,6 +75,7 @@
             this.DetailBTNMes.TabIndex = 5;
             this.DetailBTNMes.Text = "Último Mês";
             this.DetailBTNMes.UseVisualStyleBackColor = false;
+            this.DetailBTNMes.Click += new System.EventHandler(this.DetailBTNMes_Click);
             // 
             // DetailBTNBuscar
             // 

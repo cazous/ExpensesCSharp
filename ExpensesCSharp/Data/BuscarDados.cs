@@ -59,5 +59,53 @@ namespace ExpensesCSharp.Data
                 //Mensagem de erro
             }
         }
+
+        public void BuscarUltimoMes(DataGridView _tabela)
+        {
+            DataTable datatable = new DataTable();
+            try
+            {
+                using(SqlConnection con = OpenConnection())
+                {
+                    string dataAtual = DateTime.Now.Month.ToString();
+                    
+                    string querySelecao = "SELECT * FROM Expense where month(data) = @anoAtual order by [data]";
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
+                    adapter.SelectCommand.Parameters.AddWithValue("@anoAtual", dataAtual);
+                    adapter.Fill(datatable);
+                    _tabela.DataSource= datatable;
+                }
+            }
+            catch (Exception e)
+            {
+
+               //Mensagem de erro
+            }
+
+        }
+
+        public void BuscarUltimoAno(DataGridView _tabela)
+        {
+            DataTable datatable = new DataTable();
+            try
+            {
+                using(SqlConnection con = OpenConnection())
+                {
+                    string dataAtual = DateTime.Now.Year.ToString();
+
+                    string querySelecao = "SELECT * FROM Expense where year(data) = @anoAtual order by [data]";
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
+                    adapter.SelectCommand.Parameters.AddWithValue("@anoAtual", dataAtual);
+                    adapter.Fill(datatable);
+                    _tabela.DataSource = datatable;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
     }
 }
