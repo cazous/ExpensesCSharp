@@ -1,21 +1,2 @@
-﻿DataForm:
-- Inserção OK
-- Inserção sem campos (mensagem de erro) OK
-- Deletar (mensagem de confirmação) OK
-- Editar OK
-
-DetailForm:
-- Atualizar OK
-- Atualizar sem campos (mensagem de erro) OK
-- Cancelar OK
-- Receber informações ja cadastradas
-* Tabela do form Data tem que ser atualizada quando o botão update for clicado
-
-FilterForm:
-Buscar por data
-Buscar ultimo mes
-Buscar ultimo ano
-Mostrar gastos totais
-Mostrar gastos CC
-Mostrar gastos Pix
-Mostrar gastos debito
+﻿- Add todas as mensagens de erro
+- Design

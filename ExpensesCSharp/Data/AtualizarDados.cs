@@ -24,6 +24,7 @@ namespace ExpensesCSharp.Data
 
                 using (SqlConnection con = OpenConnection())
                 {
+                   
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = _id;
                     cmd.Parameters.Add("@data", SqlDbType.DateTime).Value = _data;
@@ -37,7 +38,6 @@ namespace ExpensesCSharp.Data
             }
             catch (Exception e)
             {
-
                 mensagensErro.ErroDeAtualizacaoATT001(e);
             }
            

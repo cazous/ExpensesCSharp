@@ -35,9 +35,9 @@
             this.DetailLabelInicio = new System.Windows.Forms.Label();
             this.DetailDateFim = new System.Windows.Forms.DateTimePicker();
             this.DetailDateInicio = new System.Windows.Forms.DateTimePicker();
-            this.labelNumberDebito = new System.Windows.Forms.Label();
-            this.labelNumberPix = new System.Windows.Forms.Label();
-            this.labelNumberCC = new System.Windows.Forms.Label();
+            this.labelQuantDebito = new System.Windows.Forms.Label();
+            this.labelQuantPix = new System.Windows.Forms.Label();
+            this.labelQuantCC = new System.Windows.Forms.Label();
             this.labelValorGastosTotais = new System.Windows.Forms.Label();
             this.labelDebito = new System.Windows.Forms.Label();
             this.labelPix = new System.Windows.Forms.Label();
@@ -121,29 +121,29 @@
             this.DetailDateInicio.Size = new System.Drawing.Size(192, 20);
             this.DetailDateInicio.TabIndex = 0;
             // 
-            // labelNumberDebito
+            // labelQuantDebito
             // 
-            this.labelNumberDebito.AutoSize = true;
-            this.labelNumberDebito.Location = new System.Drawing.Point(72, 320);
-            this.labelNumberDebito.Name = "labelNumberDebito";
-            this.labelNumberDebito.Size = new System.Drawing.Size(0, 13);
-            this.labelNumberDebito.TabIndex = 8;
+            this.labelQuantDebito.AutoSize = true;
+            this.labelQuantDebito.Location = new System.Drawing.Point(72, 320);
+            this.labelQuantDebito.Name = "labelQuantDebito";
+            this.labelQuantDebito.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantDebito.TabIndex = 8;
             // 
-            // labelNumberPix
+            // labelQuantPix
             // 
-            this.labelNumberPix.AutoSize = true;
-            this.labelNumberPix.Location = new System.Drawing.Point(55, 294);
-            this.labelNumberPix.Name = "labelNumberPix";
-            this.labelNumberPix.Size = new System.Drawing.Size(0, 13);
-            this.labelNumberPix.TabIndex = 7;
+            this.labelQuantPix.AutoSize = true;
+            this.labelQuantPix.Location = new System.Drawing.Point(55, 294);
+            this.labelQuantPix.Name = "labelQuantPix";
+            this.labelQuantPix.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantPix.TabIndex = 7;
             // 
-            // labelNumberCC
+            // labelQuantCC
             // 
-            this.labelNumberCC.AutoSize = true;
-            this.labelNumberCC.Location = new System.Drawing.Point(120, 267);
-            this.labelNumberCC.Name = "labelNumberCC";
-            this.labelNumberCC.Size = new System.Drawing.Size(0, 13);
-            this.labelNumberCC.TabIndex = 6;
+            this.labelQuantCC.AutoSize = true;
+            this.labelQuantCC.Location = new System.Drawing.Point(120, 267);
+            this.labelQuantCC.Name = "labelQuantCC";
+            this.labelQuantCC.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantCC.TabIndex = 6;
             // 
             // labelValorGastosTotais
             // 
@@ -264,10 +264,10 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1213, 654);
             this.Controls.Add(this.tabelaFilterForm);
-            this.Controls.Add(this.labelNumberDebito);
+            this.Controls.Add(this.labelQuantDebito);
             this.Controls.Add(this.DetailBTNAno);
-            this.Controls.Add(this.labelNumberPix);
-            this.Controls.Add(this.labelNumberCC);
+            this.Controls.Add(this.labelQuantPix);
+            this.Controls.Add(this.labelQuantCC);
             this.Controls.Add(this.labelValorGastosTotais);
             this.Controls.Add(this.DetailBTNMes);
             this.Controls.Add(this.labelDebito);
@@ -305,9 +305,9 @@
         private System.Windows.Forms.Label labelCC;
         private System.Windows.Forms.Label labelDebito;
         private System.Windows.Forms.DataGridView tabelaFilterForm;
-        private System.Windows.Forms.Label labelNumberDebito;
-        private System.Windows.Forms.Label labelNumberPix;
-        private System.Windows.Forms.Label labelNumberCC;
+        private System.Windows.Forms.Label labelQuantDebito;
+        private System.Windows.Forms.Label labelQuantPix;
+        private System.Windows.Forms.Label labelQuantCC;
         private System.Windows.Forms.Label labelValorGastosTotais;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;

@@ -47,20 +47,29 @@ namespace ExpensesCSharp.Forms
 
         private void DetailBTNBuscar_Click(object sender, EventArgs e)
         {
-            //tabelaFilterForm.DataSource = null;
-            //tabelaFilterForm.Rows.Clear();
-            //Limpar a tabela antes da busca
             buscarDados.BuscarPorData(tabelaFilterForm, DetailDateInicio.Value, DetailDateFim.Value);
+            buscarDados.EstatisticasGastosTotaisPorData(DetailDateInicio.Value, DetailDateFim.Value, labelValorGastosTotais);
+            buscarDados.EstatisticasFormaPagamentoPorData(DetailDateInicio.Value, DetailDateFim.Value, labelQuantCC, "Cartão de Crédito");
+            buscarDados.EstatisticasFormaPagamentoPorData(DetailDateInicio.Value, DetailDateFim.Value, labelQuantPix, "PIX");
+            buscarDados.EstatisticasFormaPagamentoPorData(DetailDateInicio.Value, DetailDateFim.Value, labelQuantDebito, "Débito");
         }
 
         private void DetailBTNMes_Click(object sender, EventArgs e)
         {
             buscarDados.BuscarUltimoMes(tabelaFilterForm);
+            buscarDados.EstatisticasGastosTotaisPorMes(labelValorGastosTotais);
+            buscarDados.EstatisticasFormaPagamentoPorMes(labelQuantCC, "Cartão de Crédito");
+            buscarDados.EstatisticasFormaPagamentoPorMes(labelQuantPix, "PIX");
+            buscarDados.EstatisticasFormaPagamentoPorMes(labelQuantDebito, "Débito");
         }
 
         private void DetailBTNAno_Click(object sender, EventArgs e)
         {
             buscarDados.BuscarUltimoAno(tabelaFilterForm);
+            buscarDados.EstatisticasGastosTotaisPorAno(labelValorGastosTotais);
+            buscarDados.EstatisticasFormaPagamentoPorAno(labelQuantCC, "Cartão de Crédito");
+            buscarDados.EstatisticasFormaPagamentoPorAno(labelQuantPix, "PIX");
+            buscarDados.EstatisticasFormaPagamentoPorAno(labelQuantDebito, "Débito");
         }
     }
 }
