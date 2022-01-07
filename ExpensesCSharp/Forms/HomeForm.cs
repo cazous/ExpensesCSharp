@@ -44,9 +44,9 @@ namespace ExpensesCSharp
 
             loadForm(new DataForm());
             buttonHome.Enabled = false;
-            buttonHome.BackColor = Color.SteelBlue;
+            
             buttonDetails.Enabled = true;
-            buttonDetails.BackColor = Color.LightSkyBlue;
+           
 
 
         }
@@ -65,9 +65,9 @@ namespace ExpensesCSharp
         {
             loadForm(new FilterForm());
             buttonHome.Enabled = true;
-            buttonHome.BackColor = Color.LightSkyBlue;
+            
             buttonDetails.Enabled = false;
-            buttonDetails.BackColor = Color.SteelBlue;
+            
         }
 
         private void PainelPrincipal_Paint(object sender, PaintEventArgs e)

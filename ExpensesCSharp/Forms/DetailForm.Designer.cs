@@ -40,6 +40,9 @@
             // btnDetailFormUpdate
             // 
             this.btnDetailFormUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDetailFormUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailFormUpdate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailFormUpdate.ForeColor = System.Drawing.Color.White;
             this.btnDetailFormUpdate.Location = new System.Drawing.Point(126, 412);
             this.btnDetailFormUpdate.Name = "btnDetailFormUpdate";
             this.btnDetailFormUpdate.Size = new System.Drawing.Size(200, 35);
@@ -50,6 +53,9 @@
             // 
             // btnDetailFormCancel
             // 
+            this.btnDetailFormCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailFormCancel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailFormCancel.ForeColor = System.Drawing.Color.White;
             this.btnDetailFormCancel.Location = new System.Drawing.Point(379, 424);
             this.btnDetailFormCancel.Name = "btnDetailFormCancel";
             this.btnDetailFormCancel.Size = new System.Drawing.Size(59, 23);
@@ -97,9 +103,11 @@
             // lblDetailFormId
             // 
             this.lblDetailFormId.AutoSize = true;
+            this.lblDetailFormId.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailFormId.ForeColor = System.Drawing.Color.White;
             this.lblDetailFormId.Location = new System.Drawing.Point(27, 13);
             this.lblDetailFormId.Name = "lblDetailFormId";
-            this.lblDetailFormId.Size = new System.Drawing.Size(18, 13);
+            this.lblDetailFormId.Size = new System.Drawing.Size(21, 14);
             this.lblDetailFormId.TabIndex = 6;
             this.lblDetailFormId.Text = "ID";
             // 
@@ -107,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(450, 488);
             this.Controls.Add(this.lblDetailFormId);
             this.Controls.Add(this.txtDetailFormValor);
@@ -118,6 +126,7 @@
             this.Controls.Add(this.btnDetailFormUpdate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailForm";
+            this.Opacity = 0.95D;
             this.Text = "DetailForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -22,7 +22,7 @@ namespace ExpensesCSharp.Data
                 using (SqlConnection con = OpenConnection())
                 {
                     string querySelecao = "SELECT id, [data], descricao, pagamento, valor FROM Expense";
-                    
+
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con); //Executor da query se seleção
                     adapter.SelectCommand.ExecuteNonQuery(); //Execução
                     adapter.Fill(datatable); //Preenchimento objeto tabela (datatable)
@@ -45,7 +45,7 @@ namespace ExpensesCSharp.Data
                 using (SqlConnection con = OpenConnection())
                 {
                     string querySelecao = "SELECT * FROM Expense WHERE [data] BETWEEN @dataInicial AND @dataFinal";
-                    
+
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@dataInicial", _dataInicial);
                     adapter.SelectCommand.Parameters.AddWithValue("@dataFinal", _dataFinal);
@@ -72,7 +72,7 @@ namespace ExpensesCSharp.Data
                     string mesAtual = DateTime.Now.Month.ToString();
 
                     string querySelecao = "SELECT * FROM Expense where month(data) = @mesAtual order by [data]";
-                   
+
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@mesAtual", mesAtual);
                     adapter.Fill(datatable);
@@ -97,7 +97,7 @@ namespace ExpensesCSharp.Data
                     string anoAtual = DateTime.Now.Year.ToString();
 
                     string querySelecao = "SELECT * FROM Expense where year(data) = @anoAtual order by [data]";
-                   
+
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@anoAtual", anoAtual);
                     adapter.Fill(datatable);
@@ -119,25 +119,28 @@ namespace ExpensesCSharp.Data
                 using (SqlConnection con = OpenConnection())
                 {
                     string querySelecao = "SELECT SUM(valor) FROM Expense WHERE [data] BETWEEN @dataInicial AND @dataFinal";
-                    
+
                     SqlCommand cmd = new SqlCommand(querySelecao, con);
                     cmd.Parameters.Add("@dataInicial", SqlDbType.DateTime).Value = _dataInicial;
                     cmd.Parameters.Add("@dataFinal", SqlDbType.DateTime).Value = _dataFinal;
 
                     SqlDataReader reader = cmd.ExecuteReader();
                     reader.Read();
-                    _label.Text = reader.GetDecimal(0).ToString();
 
-                    if(reader.GetDecimal(0).ToString() == null)
+                    if (reader.IsDBNull(0))
                     {
                         _label.Text = "0";
+                    }
+                    else
+                    {
+                        _label.Text = reader.GetDecimal(0).ToString();
                     }
 
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show(e.ToString());
             }
         }
 
@@ -149,12 +152,12 @@ namespace ExpensesCSharp.Data
                 using (SqlConnection con = OpenConnection())
                 {
                     string querySelecao = "SELECT COUNT(pagamento) FROM Expense WHERE [data] BETWEEN @dataInicial AND @dataFinal AND pagamento = @pagamento";
-                    
+
                     SqlCommand cmd = new SqlCommand(querySelecao, con);
                     cmd.Parameters.Add("@datainicial", SqlDbType.DateTime).Value = _dataInicial;
                     cmd.Parameters.Add("@dataFinal", SqlDbType.DateTime).Value = _dataFinal;
                     cmd.Parameters.Add("@pagamento", SqlDbType.VarChar).Value = _pagamento;
-                    
+
                     SqlDataReader reader = cmd.ExecuteReader();
                     reader.Read();
 
@@ -184,7 +187,7 @@ namespace ExpensesCSharp.Data
                     reader.Read();
 
                     _label.Text = reader.GetDecimal(0).ToString();
-                    
+
                 }
             }
             catch (Exception e)
@@ -228,7 +231,7 @@ namespace ExpensesCSharp.Data
                 using (SqlConnection con = OpenConnection())
                 {
                     string anoAtual = DateTime.Now.Year.ToString();
-                    
+
                     string querySelecao = "SELECT SUM(valor) FROM Expense WHERE year(data) = @anoAtual";
 
                     SqlCommand cmd = new SqlCommand(querySelecao, con);

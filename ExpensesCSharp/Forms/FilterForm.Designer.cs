@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DetailBTNAno = new System.Windows.Forms.Button();
             this.DetailBTNMes = new System.Windows.Forms.Button();
             this.DetailBTNBuscar = new System.Windows.Forms.Button();
@@ -55,11 +56,13 @@
             // 
             // DetailBTNAno
             // 
-            this.DetailBTNAno.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.DetailBTNAno.BackColor = System.Drawing.Color.SteelBlue;
             this.DetailBTNAno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailBTNAno.Location = new System.Drawing.Point(7, 157);
+            this.DetailBTNAno.ForeColor = System.Drawing.Color.White;
+            this.DetailBTNAno.Location = new System.Drawing.Point(8, 157);
+            this.DetailBTNAno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetailBTNAno.Name = "DetailBTNAno";
-            this.DetailBTNAno.Size = new System.Drawing.Size(192, 23);
+            this.DetailBTNAno.Size = new System.Drawing.Size(224, 23);
             this.DetailBTNAno.TabIndex = 6;
             this.DetailBTNAno.Text = "Último Ano";
             this.DetailBTNAno.UseVisualStyleBackColor = false;
@@ -67,11 +70,13 @@
             // 
             // DetailBTNMes
             // 
-            this.DetailBTNMes.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.DetailBTNMes.BackColor = System.Drawing.Color.SteelBlue;
             this.DetailBTNMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailBTNMes.Location = new System.Drawing.Point(7, 128);
+            this.DetailBTNMes.ForeColor = System.Drawing.Color.White;
+            this.DetailBTNMes.Location = new System.Drawing.Point(8, 128);
+            this.DetailBTNMes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetailBTNMes.Name = "DetailBTNMes";
-            this.DetailBTNMes.Size = new System.Drawing.Size(192, 23);
+            this.DetailBTNMes.Size = new System.Drawing.Size(224, 23);
             this.DetailBTNMes.TabIndex = 5;
             this.DetailBTNMes.Text = "Último Mês";
             this.DetailBTNMes.UseVisualStyleBackColor = false;
@@ -79,11 +84,13 @@
             // 
             // DetailBTNBuscar
             // 
-            this.DetailBTNBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.DetailBTNBuscar.BackColor = System.Drawing.Color.SteelBlue;
             this.DetailBTNBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailBTNBuscar.Location = new System.Drawing.Point(7, 99);
+            this.DetailBTNBuscar.ForeColor = System.Drawing.Color.White;
+            this.DetailBTNBuscar.Location = new System.Drawing.Point(8, 99);
+            this.DetailBTNBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetailBTNBuscar.Name = "DetailBTNBuscar";
-            this.DetailBTNBuscar.Size = new System.Drawing.Size(192, 23);
+            this.DetailBTNBuscar.Size = new System.Drawing.Size(224, 23);
             this.DetailBTNBuscar.TabIndex = 4;
             this.DetailBTNBuscar.Text = "BUSCAR";
             this.DetailBTNBuscar.UseVisualStyleBackColor = false;
@@ -92,91 +99,120 @@
             // DetailLabelFim
             // 
             this.DetailLabelFim.AutoSize = true;
-            this.DetailLabelFim.Location = new System.Drawing.Point(16, 52);
+            this.DetailLabelFim.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailLabelFim.ForeColor = System.Drawing.Color.White;
+            this.DetailLabelFim.Location = new System.Drawing.Point(19, 52);
+            this.DetailLabelFim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DetailLabelFim.Name = "DetailLabelFim";
-            this.DetailLabelFim.Size = new System.Drawing.Size(23, 13);
+            this.DetailLabelFim.Size = new System.Drawing.Size(27, 14);
             this.DetailLabelFim.TabIndex = 3;
             this.DetailLabelFim.Text = "Fim";
             // 
             // DetailLabelInicio
             // 
             this.DetailLabelInicio.AutoSize = true;
-            this.DetailLabelInicio.Location = new System.Drawing.Point(16, 9);
+            this.DetailLabelInicio.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailLabelInicio.ForeColor = System.Drawing.Color.White;
+            this.DetailLabelInicio.Location = new System.Drawing.Point(19, 9);
+            this.DetailLabelInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DetailLabelInicio.Name = "DetailLabelInicio";
-            this.DetailLabelInicio.Size = new System.Drawing.Size(32, 13);
+            this.DetailLabelInicio.Size = new System.Drawing.Size(40, 14);
             this.DetailLabelInicio.TabIndex = 2;
             this.DetailLabelInicio.Text = "Inicio";
             // 
             // DetailDateFim
             // 
-            this.DetailDateFim.Location = new System.Drawing.Point(7, 72);
+            this.DetailDateFim.Location = new System.Drawing.Point(8, 72);
+            this.DetailDateFim.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetailDateFim.Name = "DetailDateFim";
-            this.DetailDateFim.Size = new System.Drawing.Size(192, 20);
+            this.DetailDateFim.Size = new System.Drawing.Size(223, 21);
             this.DetailDateFim.TabIndex = 1;
             // 
             // DetailDateInicio
             // 
-            this.DetailDateInicio.Location = new System.Drawing.Point(7, 27);
+            this.DetailDateInicio.Location = new System.Drawing.Point(8, 27);
+            this.DetailDateInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetailDateInicio.Name = "DetailDateInicio";
-            this.DetailDateInicio.Size = new System.Drawing.Size(192, 20);
+            this.DetailDateInicio.Size = new System.Drawing.Size(223, 21);
             this.DetailDateInicio.TabIndex = 0;
             // 
             // labelQuantDebito
             // 
             this.labelQuantDebito.AutoSize = true;
-            this.labelQuantDebito.Location = new System.Drawing.Point(72, 320);
+            this.labelQuantDebito.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantDebito.ForeColor = System.Drawing.Color.White;
+            this.labelQuantDebito.Location = new System.Drawing.Point(84, 320);
+            this.labelQuantDebito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantDebito.Name = "labelQuantDebito";
-            this.labelQuantDebito.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantDebito.Size = new System.Drawing.Size(0, 14);
             this.labelQuantDebito.TabIndex = 8;
             // 
             // labelQuantPix
             // 
             this.labelQuantPix.AutoSize = true;
-            this.labelQuantPix.Location = new System.Drawing.Point(55, 294);
+            this.labelQuantPix.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantPix.ForeColor = System.Drawing.Color.White;
+            this.labelQuantPix.Location = new System.Drawing.Point(64, 294);
+            this.labelQuantPix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantPix.Name = "labelQuantPix";
-            this.labelQuantPix.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantPix.Size = new System.Drawing.Size(0, 14);
             this.labelQuantPix.TabIndex = 7;
             // 
             // labelQuantCC
             // 
             this.labelQuantCC.AutoSize = true;
-            this.labelQuantCC.Location = new System.Drawing.Point(120, 267);
+            this.labelQuantCC.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantCC.ForeColor = System.Drawing.Color.White;
+            this.labelQuantCC.Location = new System.Drawing.Point(143, 267);
+            this.labelQuantCC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantCC.Name = "labelQuantCC";
-            this.labelQuantCC.Size = new System.Drawing.Size(0, 13);
+            this.labelQuantCC.Size = new System.Drawing.Size(0, 14);
             this.labelQuantCC.TabIndex = 6;
             // 
             // labelValorGastosTotais
             // 
             this.labelValorGastosTotais.AutoSize = true;
-            this.labelValorGastosTotais.Location = new System.Drawing.Point(111, 228);
+            this.labelValorGastosTotais.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorGastosTotais.ForeColor = System.Drawing.Color.White;
+            this.labelValorGastosTotais.Location = new System.Drawing.Point(130, 228);
+            this.labelValorGastosTotais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelValorGastosTotais.Name = "labelValorGastosTotais";
-            this.labelValorGastosTotais.Size = new System.Drawing.Size(0, 13);
+            this.labelValorGastosTotais.Size = new System.Drawing.Size(0, 14);
             this.labelValorGastosTotais.TabIndex = 5;
             // 
             // labelDebito
             // 
             this.labelDebito.AutoSize = true;
-            this.labelDebito.Location = new System.Drawing.Point(17, 320);
+            this.labelDebito.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDebito.ForeColor = System.Drawing.Color.White;
+            this.labelDebito.Location = new System.Drawing.Point(20, 320);
+            this.labelDebito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDebito.Name = "labelDebito";
-            this.labelDebito.Size = new System.Drawing.Size(41, 13);
+            this.labelDebito.Size = new System.Drawing.Size(52, 14);
             this.labelDebito.TabIndex = 4;
             this.labelDebito.Text = "Débito:";
             // 
             // labelPix
             // 
             this.labelPix.AutoSize = true;
-            this.labelPix.Location = new System.Drawing.Point(17, 294);
+            this.labelPix.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPix.ForeColor = System.Drawing.Color.White;
+            this.labelPix.Location = new System.Drawing.Point(20, 294);
+            this.labelPix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPix.Name = "labelPix";
-            this.labelPix.Size = new System.Drawing.Size(27, 13);
+            this.labelPix.Size = new System.Drawing.Size(32, 14);
             this.labelPix.TabIndex = 3;
             this.labelPix.Text = "PIX:";
             // 
             // labelCC
             // 
             this.labelCC.AutoSize = true;
-            this.labelCC.Location = new System.Drawing.Point(17, 267);
+            this.labelCC.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCC.ForeColor = System.Drawing.Color.White;
+            this.labelCC.Location = new System.Drawing.Point(20, 267);
+            this.labelCC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCC.Name = "labelCC";
-            this.labelCC.Size = new System.Drawing.Size(92, 13);
+            this.labelCC.Size = new System.Drawing.Size(120, 14);
             this.labelCC.TabIndex = 2;
             this.labelCC.Text = "Cartão de Crédito:";
             this.labelCC.Click += new System.EventHandler(this.label2_Click);
@@ -184,25 +220,36 @@
             // labelGastosTotais
             // 
             this.labelGastosTotais.AutoSize = true;
-            this.labelGastosTotais.Location = new System.Drawing.Point(15, 228);
+            this.labelGastosTotais.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGastosTotais.ForeColor = System.Drawing.Color.White;
+            this.labelGastosTotais.Location = new System.Drawing.Point(18, 228);
+            this.labelGastosTotais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGastosTotais.Name = "labelGastosTotais";
-            this.labelGastosTotais.Size = new System.Drawing.Size(75, 13);
+            this.labelGastosTotais.Size = new System.Drawing.Size(93, 14);
             this.labelGastosTotais.TabIndex = 1;
             this.labelGastosTotais.Text = "Gastos Totais:";
             // 
             // DetailLabelEstatistica
             // 
             this.DetailLabelEstatistica.AutoSize = true;
-            this.DetailLabelEstatistica.Location = new System.Drawing.Point(12, 196);
+            this.DetailLabelEstatistica.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailLabelEstatistica.ForeColor = System.Drawing.Color.White;
+            this.DetailLabelEstatistica.Location = new System.Drawing.Point(14, 196);
+            this.DetailLabelEstatistica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DetailLabelEstatistica.Name = "DetailLabelEstatistica";
-            this.DetailLabelEstatistica.Size = new System.Drawing.Size(65, 13);
+            this.DetailLabelEstatistica.Size = new System.Drawing.Size(100, 18);
             this.DetailLabelEstatistica.TabIndex = 0;
             this.DetailLabelEstatistica.Text = "Estatísticas:";
             this.DetailLabelEstatistica.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabelaFilterForm
             // 
-            this.tabelaFilterForm.BackgroundColor = System.Drawing.Color.White;
+            this.tabelaFilterForm.AllowUserToAddRows = false;
+            this.tabelaFilterForm.AllowUserToDeleteRows = false;
+            this.tabelaFilterForm.AllowUserToResizeColumns = false;
+            this.tabelaFilterForm.AllowUserToResizeRows = false;
+            this.tabelaFilterForm.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.tabelaFilterForm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.tabelaFilterForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaFilterForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -210,11 +257,22 @@
             this.Descrição,
             this.Pagamento,
             this.Valor});
-            this.tabelaFilterForm.GridColor = System.Drawing.Color.White;
-            this.tabelaFilterForm.Location = new System.Drawing.Point(212, 9);
+            this.tabelaFilterForm.GridColor = System.Drawing.Color.SteelBlue;
+            this.tabelaFilterForm.Location = new System.Drawing.Point(247, 9);
+            this.tabelaFilterForm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabelaFilterForm.MultiSelect = false;
             this.tabelaFilterForm.Name = "tabelaFilterForm";
+            this.tabelaFilterForm.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaFilterForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabelaFilterForm.RowHeadersVisible = false;
-            this.tabelaFilterForm.Size = new System.Drawing.Size(998, 642);
+            this.tabelaFilterForm.Size = new System.Drawing.Size(964, 650);
             this.tabelaFilterForm.TabIndex = 0;
             this.tabelaFilterForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -223,6 +281,7 @@
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
             // Data
@@ -230,6 +289,7 @@
             this.Data.DataPropertyName = "data";
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
             this.Data.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Data.Width = 140;
             // 
@@ -238,6 +298,7 @@
             this.Descrição.DataPropertyName = "descricao";
             this.Descrição.HeaderText = "Descrição";
             this.Descrição.Name = "Descrição";
+            this.Descrição.ReadOnly = true;
             this.Descrição.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Descrição.Width = 480;
             // 
@@ -246,6 +307,7 @@
             this.Pagamento.DataPropertyName = "pagamento";
             this.Pagamento.HeaderText = "Pagamento";
             this.Pagamento.Name = "Pagamento";
+            this.Pagamento.ReadOnly = true;
             this.Pagamento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Pagamento.Width = 200;
             // 
@@ -254,14 +316,15 @@
             this.Valor.DataPropertyName = "valor";
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
             this.Valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Valor.Width = 180;
             // 
             // FilterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1213, 654);
             this.Controls.Add(this.tabelaFilterForm);
             this.Controls.Add(this.labelQuantDebito);
@@ -280,8 +343,11 @@
             this.Controls.Add(this.DetailDateInicio);
             this.Controls.Add(this.DetailLabelEstatistica);
             this.Controls.Add(this.DetailDateFim);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FilterForm";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detail";
             this.Load += new System.EventHandler(this.DetailForm_Load);
