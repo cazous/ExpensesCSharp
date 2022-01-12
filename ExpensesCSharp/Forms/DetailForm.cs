@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace ExpensesCSharp.Forms
 {
@@ -47,7 +48,7 @@ namespace ExpensesCSharp.Forms
             else
             {
                 DataForm dataForm = new DataForm();
-                atualizarDados.AtualizarGastos(idGasto, dtpDetailForm.Value,txtDetailFormDescricao.Text,(String)cbDetailForm.SelectedItem, Decimal.Parse(txtDetailFormValor.Text));
+                atualizarDados.AtualizarGastos(idGasto, dtpDetailForm.Value,txtDetailFormDescricao.Text,(String)cbDetailForm.SelectedItem, Decimal.Parse(txtDetailFormValor.Text, CultureInfo.InvariantCulture));
                 mensagensConfirmacao.ConfirmarAtualizacao();
                 this.Close();
                 

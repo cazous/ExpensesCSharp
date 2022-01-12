@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace ExpensesCSharp.Forms
 {
@@ -37,7 +38,7 @@ namespace ExpensesCSharp.Forms
                 }
                 else
                 {
-                    inserirDados.InserirGasto(dtpData.Value, txtDescricao.Text, (String)cmbPagamento.SelectedItem, Decimal.Parse(txtValor.Text));
+                    inserirDados.InserirGasto(dtpData.Value, txtDescricao.Text, (String)cmbPagamento.SelectedItem, Decimal.Parse(txtValor.Text, CultureInfo.InvariantCulture));
                     atualizarTabela();
 
                 }
