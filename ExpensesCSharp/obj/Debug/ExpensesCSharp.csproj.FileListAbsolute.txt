@@ -12,3 +12,17 @@ C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCShar
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DataForm.resources
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.FilterForm.resources
 C:\Users\Home\source\repos\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DetailForm.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\bin\Debug\ExpensesCSharp.exe.config
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\bin\Debug\ExpensesCSharp.exe
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\bin\Debug\ExpensesCSharp.pdb
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.csproj.AssemblyReference.cache
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DataForm.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.DetailForm.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Forms.FilterForm.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Form1.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.Properties.Resources.resources
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.csproj.GenerateResource.cache
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.exe
+C:\Users\Home\GithubRepositories\ExpensesCSharp\ExpensesCSharp\obj\Debug\ExpensesCSharp.pdb
